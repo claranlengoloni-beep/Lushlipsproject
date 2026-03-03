@@ -1,0 +1,20 @@
+/* Paragraph 3 Requirement: Purple & Underline */
+.p3-external {
+    color: #6A1B9A;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+/* Highlight 3 Requirement: External Color */
+.h1-external {
+    color: #4A148C;
+    font-style: italic;
+}
+
+/* Building 3 Requirement: External Color */
+.h3-external {
+    color: #311B92;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 15px;
+}
