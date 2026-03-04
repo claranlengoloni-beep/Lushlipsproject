@@ -1,22 +1,14 @@
-/* EXTERNAL CSS DEFINITIONS */
 
-.external-p {
+
+.purple-underline {
     color: purple;
     text-decoration: underline;
 }
 
-.external-h1 {
-    color: #8e44ad; /* Deep Purple/Pinkish */
-    text-transform: uppercase;
+.h1-external {
+    color: rebeccapurple;
 }
 
-.external-h3 {
-    color: #2980b9; /* Professional Blue */
-}
-
-/* Page aesthetics */
-body {
-    font-family: sans-serif;
-    padding: 20px;
-    background-color: #fafafa;
+.h3-external {
+    color: saddlebrown;
 }
