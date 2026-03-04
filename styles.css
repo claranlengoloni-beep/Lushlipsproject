@@ -1,20 +1,22 @@
-/* Paragraph 3 Requirement: Purple & Underline */
-.p3-external {
-    color: #6A1B9A;
+/* EXTERNAL CSS DEFINITIONS */
+
+.external-p {
+    color: purple;
     text-decoration: underline;
-    font-size: 1.1rem;
 }
 
-/* Highlight 3 Requirement: External Color */
-.h1-external {
-    color: #4A148C;
-    font-style: italic;
+.external-h1 {
+    color: #8e44ad; /* Deep Purple/Pinkish */
+    text-transform: uppercase;
 }
 
-/* Building 3 Requirement: External Color */
-.h3-external {
-    color: #311B92;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 10px;
-    border-radius: 15px;
+.external-h3 {
+    color: #2980b9; /* Professional Blue */
+}
+
+/* Page aesthetics */
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #fafafa;
 }
