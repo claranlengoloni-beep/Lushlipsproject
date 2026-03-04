@@ -2,64 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lush Lips | Organic Care</title>
+    <title>LushLips</title>
+    <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Internal CSS Requirements */
-        body {
-            background-color: #F4C2C2; /* Baby Pink Background */
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-
-        /* Paragraph 2 Requirement: Orange & Bold */
-        .p2-internal {
-            color: #FF8C00; 
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Highlight 2 Requirement: Internal Color */
-        .h1-internal {
-            color: #D81B60; /* Deep Rose */
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Building 2 Requirement: Internal Color */
-        .h3-internal {
-            color: #AD1457;
-            border-bottom: 2px solid white;
-            display: inline-block;
-        }
+        .internal-p { color: purple; font-weight: bold; }
+        .internal-h1 { color: #d63384; }
+        .internal-h3 { color: #6610f2; }
+        
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        table, th, td { border: 1px solid black; padding: 5px; text-align: center; }
     </style>
-
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <p style="color: blue; font-style: italic;">Paragraph 1: Our glosses are made with 100% vegan oils. (Inline: Blue/Italic)</p>
-    
-    <p class="p2-internal">Paragraph 2: Say goodbye to chapped lips forever. (Internal: Orange/Bold)</p>
-    
-    <p class="p3-external">Paragraph 3: Shop our Summer Watermelon collection now! (External: Purple/Underline)</p>
+    <header>
+        <h1>LushLips Branding</h1>
+        <p>Make sure it's on GitHub</p>
+    </header>
 
-    <hr style="border: 1px solid white; margin: 40px 0;">
+    <hr>
 
-    <h1 style="color: #B00020;">Highlight 1: 24-Hour Hydration (Inline)</h1>
-    
-    <h1 class="h1-internal">Highlight 2: Vitamin E Infused (Internal)</h1>
-    
-    <h1 class="h1-external">Highlight 3: Cruelty-Free Beauty (External)</h1>
+    <section>
+        <h2>Task 1: Paragraphs</h2>
+        <p><b>Line 1: This text is Bold for emphasis.</b></p>
+        <p><i>Line 2: This text is in Italics.</i></p>
+        <p><u>Line 3: This line is Underlined.</u></p>
+        <p>Line 4: Superscripts: Date 25<sup>th</sup> and Other 3<sup>3</sup></p>
+        <p>Line 5: Subscript: H<sub>2</sub>O and Value<sub>4</sub></p>
+        <p><strike>Line 6: This text has a Stroke (strikethrough).</strike></p>
+        <p><mark>Line 7: This is Highlighted text.</mark></p>
+        <p><q>Line 8: This is a Quotation.</q></p>
+        <blockquote style="margin-left: 40px;">Line 9: This is an Indent Quotation (Blockquote).</blockquote>
+        <footer>Line 10: This is the Footer text.</footer>
+    </section>
 
-    <hr style="border: 1px solid white; margin: 40px 0;">
+    <hr>
 
-    <h3 style="color: #E91E63;">Building 1: The Gloss Bar (Inline)</h3>
-    
-    <h3 class="h3-internal">Building 2: The Scrub Station (Internal)</h3>
-    
-    <h3 class="h3-external">Building 3: The Balm Boutique (External)</h3>
+    <section>
+        <p>Line 11: Line breaks<br>Line 2<br>Line 3<br>Line 4</p>
+        
+        <p>Line 12: 3 lines with HR</p>
+        <hr><hr><hr>
+
+        <p>Line 13: 3 lines pre (Preformatted)</p>
+        <pre>
+Line 1: Fixed Width
+Line 2: Maintains Spaces
+Line 3: Exactly as typed
+        </pre>
+
+        <p>Line 14: Unordered list (5 items)</p>
+        <ul>
+            <li>Lip Gloss</li><li>Lip Liner</li><li>Lip Balm</li><li>Lip Scrub</li><li>Lip Mask</li>
+        </ul>
+
+        <p>Ordered list (5 items)</p>
+        <ol>
+            <li>Step One</li><li>Step Two</li><li>Step Three</li><li>Step Four</li><li>Step Five</li>
+        </ol>
+
+        <p>Line 15: Nested list (6 items total)</p>
+        <ul>
+            <li>Category A
+                <ul>
+                    <li>Sub-item 1</li>
+                    <li>Sub-item 2</li>
+                </ul>
+            </li>
+            <li>Category B
+                <ul>
+                    <li>Sub-item 3</li>
+                    <li>Sub-item 4</li>
+                    <li>Sub-item 5</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>CSS Methods Practice</h3>
+        <p style="color: blue; font-style: italic;">Paragraph 1: Style using inline css (Blue Italics)</p>
+        <h1 style="color: red;">Highlight 1: Inline CSS</h1>
+        <h3 style="color: green;">Building 1: Inline CSS</h3>
+
+        <p class="internal-p">Paragraph 2: Style using Internal css (Orange Bold)</p>
+        <h1 class="internal-h1">Highlight 2: Internal CSS</h1>
+        <h3 class="internal-h3">Building 2: Internal CSS</h3>
+
+        <p class="external-p">Paragraph 3: Style using external css (Purple Underline)</p>
+        <h1 class="external-h1">Highlight 3: External CSS</h1>
+        <h3 class="external-h3">Building 3: External CSS</h3>
+    </section>
+
+    <hr>
+
+    <section>
+        <p>Line 17: Table (10 Columns x 5 Rows)</p>
+        <table>
+            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        </table>
+    </section>
 
 </body>
 </html>
