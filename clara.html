@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LushLips | Premium Lip Care</title>
+    <a href=https://claranlengoloni-beep.github.io/Lushlipsproject/ style="color:white; text-decoration: none; font-weight: bold;">Assignment 4</a>
+     <a href=https://claranlengoloni-beep.github.io/again/="color:white; text-decoration: none; font-weight: bold;">Classes and ids</a>
+  <header>
+    
+    <style>
+        /* === GLOBAL STYLES === */
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; line-height: 1.6; background-color: #fffafb; }
+        header { background: white; padding: 1rem; border-bottom: 2px solid #f8bbd0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        
+        /* === HERO SECTION === */
+        .hero {
+            background: linear-gradient(rgba(194, 24, 91, 0.4), rgba(194, 24, 91, 0.4)), url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200');
+            background-size: cover; background-position: center; height: 300px;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+        }
+
+        /* === ABOUT SECTION === */
+        .about-container { display: flex; flex-wrap: wrap; gap: 20px; padding: 40px; background: #fff; margin: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-image img { width: 100%; max-width: 400px; border-radius: 15px; }
+
+        /* === PRODUCT GRID === */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+        .product-card { background: white; border: 1px solid #fce4ec; border-radius: 12px; padding: 15px; text-align: center; cursor: pointer; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .product-card img { width: 100%; border-radius: 8px; }
+
+        /* === LIGHTBOX === */
+        #lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 2000; }
+        #lightbox.active { display: flex; }
+        #lightbox img { max-width: 90%; max-height: 80%; border: 4px solid white; }
+
+        /* === UTILITY === */
+        .hidden { display: none; }
+        .btn { background: #c2185b; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2 style="color: #c2185b; margin: 0;">LushLips</h2>
+        <nav>
+            <button class="btn" onclick="toggleMenu()">Menu</button>
+            <ul id="nav-list" class="hidden" style="position: absolute; background: white; right: 20px; top: 60px; padding: 15px; border: 1px solid #ddd; list-style: none;">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Premium Lip Care</h1>
+            <p>Naturally Hydrating. Nairobi Born.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about-container">
+        <div class="about-text">
+            <h2 style="color: #ad1457;">About Us</h2>
+            <p><strong>LushLips</strong> was created to solve the problem of dry lips in sunny climates. Our formulas use high-quality, local ingredients to give you a gloss that heals while it shines.</p>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1617343251257-b5074e8992ce?q=80&w=400" alt="Ingredients">
+        </div>
+    </section>
+
+    <h2 style="text-align: center; color: #ad1457;">Our Collection</h2>
+    
+    <section id="products" class="product-grid">
+        <div class="product-card" onclick="openLightbox('https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?q=80&w=800')">
+            <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?q=80&w=400" alt="Gloss">
+            <h3>Glossy Rose</h3>
+            <p>KSh 1,200</p>
+            <button class="btn" onclick="addToCart(event, 'Glossy Rose')">Add to Bag</button>
+        </div>
+        
+        <div class="product-card" onclick="openLightbox('https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=800')">
+            <img src="https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=400" alt="Gloss">
+            <h3>Berry Blast</h3>
+            <p>KSh 1,200</p>
+            <button class="btn" onclick="addToCart(event, 'Berry Blast')">Add to Bag</button>
+        </div>
+    </section>
+
+    <div id="lightbox" onclick="this.classList.remove('active')">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-list').classList.toggle('hidden');
+        }
+
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            document.getElementById('lightbox-img').src = src;
+            lb.classList.add('active');
+        }
+
+        function addToCart(event, name) {
+            event.stopPropagation(); // Stops the lightbox from opening
+            alert(name + " added to your bag! 💄");
+        }
+    </script>
+
+</body>
+</html>
